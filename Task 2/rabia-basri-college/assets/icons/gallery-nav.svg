@@ -1,0 +1,14 @@
+<svg width="103" height="47" viewBox="0 0 103 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="78.9177" cy="23.5" rx="23.5003" ry="23.5" fill="white"/>
+<mask id="stroke0_213_3142" fill="white">
+<path d="M55.4174 23.5C55.4174 36.4787 65.9388 47 78.9177 47C91.8965 47 102.418 36.4787 102.418 23.5C102.418 10.5213 91.8965 0 78.9177 0C65.9388 0 55.4174 10.5213 55.4174 23.5Z"/>
+</mask>
+<ellipse cx="78.9177" cy="23.5" rx="23.5003" ry="23.5" stroke-width="2.00148" stroke="#023F25" mask="url(#stroke0_213_3142)"/>
+<path d="M74.4462 33.4961L84.0918 23.8506L74.4462 14.2051" stroke-width="2.00148" stroke-linejoin="round" stroke="#023F25"/>
+<ellipse cx="23.5003" cy="23.5" rx="23.5003" ry="23.5" fill="white"/>
+<mask id="stroke1_213_3142" fill="white">
+<path d="M47.0006 23.5C47.0006 36.4787 36.4792 47 23.5003 47C10.5214 47 0 36.4787 0 23.5C0 10.5213 10.5214 0 23.5003 0C36.4792 0 47.0006 10.5213 47.0006 23.5Z"/>
+</mask>
+<ellipse cx="23.5003" cy="23.5" rx="23.5003" ry="23.5" stroke-width="2.00148" stroke="#023F25" mask="url(#stroke1_213_3142)"/>
+<path d="M27.9738 33.4961L18.3281 23.8506L27.9738 14.2051" stroke-width="2.00148" stroke-linejoin="round" stroke="#023F25"/>
+</svg>
