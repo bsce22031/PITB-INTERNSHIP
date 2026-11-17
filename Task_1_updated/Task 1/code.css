@@ -1,0 +1,293 @@
+/* =====================================================================
+   IRI website - matched to Figma (1440px desktop frame)
+   Colors : blue #2E3092 | text #333333 | nav #343434 | section bg #F6F6F6
+   Fonts  : Albert Sans (headings/body), Inter (nav "About Us", cards, research),
+            Onest (nav), Manrope (Explore button), DM Sans (sub-headings, footer)
+   ===================================================================== */
+:root{
+  --blue:#2E3092;
+  --ink:#333333;
+  --nav:#343434;
+  --muted:#5f5f5f;
+  --bg:#F6F6F6;
+  --soft:#DDDBF0;
+  --teal:#1aa88f;
+  --dark:#1d1d1d;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Albert Sans',sans-serif;font-weight:300;}
+img{display:block;max-width:100%;}
+h1,h2,h3,h4,h5,h6,p{margin:0;}
+a{text-decoration:none;}
+ul{list-style:none;margin:0;padding:0;}
+button{font-family:inherit;cursor:pointer;}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* ---------- NAV BAR ---------- */
+.topbar{
+  max-width:1440px;height:114px;margin:0 auto;
+  padding:4px 61px 0 51px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:relative;
+}
+.brand{display:flex;align-items:center;gap:15px;}
+.logo-1{width:85px;height:83.95px;}
+.logo-2{width:107px;height:94px;}
+
+.nav-menu{display:flex;align-items:center;gap:5px;padding:10px;height:50px;border-radius:24px;}
+.nav-link{
+  display:block;padding:10px 15px;border-radius:5px;
+  font-family:'Onest',sans-serif;font-weight:300;font-size:16px;line-height:19px;
+  color:var(--nav);white-space:nowrap;
+}
+.nav-link.active{background:var(--blue);color:#fff;font-family:'Inter',sans-serif;font-weight:400;}
+.search-btn{
+  width:28px;height:28px;margin-left:8px;padding:0;border:0;background:none;
+  display:flex;align-items:center;justify-content:center;overflow:visible;
+}
+.nav-toggle{display:none;background:none;border:0;font-size:32px;color:var(--blue);}
+
+/* Figma desktop positions: nav group 869x50 at left 469 / top 31, search 28x28 at left 1346 / top 42 */
+@media (min-width:1321px){
+  .nav-menu{position:absolute;left:469px;top:31px;width:869px;margin:0;}
+  .nav-menu .search-btn{position:absolute;left:877px;top:11px;margin:0;}
+}
+
+/* ---------- BANNER : 1341 x 600, radius 30 ---------- */
+.hero{width:100%;max-width:1341px;margin:0 auto;}
+.hero img{width:100%;height:auto;aspect-ratio:1341/600;object-fit:cover;border-radius:30px;}
+
+/* ---------- OVERVIEW : group 1160 x 504 ---------- */
+.overview{
+  width:1160px;max-width:100%;height:504px;margin:69px auto 0;
+  position:relative;left:-8px;               /* Figma left = 132px */
+  display:flex;align-items:flex-start;
+}
+.ov-imgs{display:flex;gap:26px;flex:0 0 548px;}
+.ov-imgs img{width:261px;height:436px;object-fit:cover;border-radius:18px;}
+.ov-a{margin-top:0;}
+.ov-b{margin-top:68px;}
+.ov-text{width:546px;margin-left:66px;padding-top:63px;}
+.ov-text h2{width:204px;font-family:'Inter',sans-serif;font-weight:500;font-size:45px;line-height:56px;text-align:center;color:var(--ink);}
+.ov-text p{
+  font-family:'Albert Sans',sans-serif;font-weight:300;font-size:18px;line-height:28px;color:var(--ink);text-align:justify;
+}
+.ov-text h2 + p{margin-top:21px;}
+.explore{
+  margin-top:29px;width:168px;height:48px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:5px 5px 5px 21px;
+  background:#fff;border:.5px solid var(--blue);border-radius:10px;
+  font-family:'Manrope',sans-serif;font-weight:600;font-size:14px;line-height:20px;letter-spacing:.14px;
+  color:var(--blue);
+}
+.explore i{
+  width:38px;height:38px;border-radius:8px;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:14px;
+}
+
+.divider{
+  width:1286px;max-width:calc(100% - 40px);margin:71px auto 0;
+  border:0;border-top:1px solid #e9e9e9;
+}
+
+/* ---------- SHARED HEADINGS ---------- */
+.sec-title{
+  font-family:'Albert Sans',sans-serif;font-weight:500;font-size:40px;line-height:60px;
+  color:var(--ink);text-align:center;
+}
+.sec-sub{
+  margin:0 auto;max-width:700px;text-align:center;
+  font-family:'Albert Sans',sans-serif;font-weight:300;font-size:20px;line-height:27px;color:var(--ink);
+}
+.sec-sub-wide{max-width:870px;}
+
+/* ---------- OUR DIRECTORATES : group 1267 x 606 ---------- */
+.directorates{width:1267px;max-width:100%;margin:66px auto 0;}
+.dir-row{display:flex;gap:26px;align-items:center;margin-top:41px;}
+.dir-card{
+  position:relative;flex:0 0 405px;width:405px;height:404px;
+  padding:16px;display:flex;flex-direction:column;gap:0;
+  background:#fff;border:1px solid #CDCDCD;border-radius:24px;
+  font-family:'Inter',sans-serif;color:var(--ink);transition:background .2s,color .2s;
+}
+.dir-card .thumb{width:373px;height:230px;object-fit:cover;border-radius:16px;margin-bottom:20px;}
+.dir-card h3{font-weight:600;font-size:26px;line-height:39px;}
+.dir-card p{margin-top:10px;font-weight:400;font-size:17px;line-height:1.5;color:#333333;}
+.dir-card .go{
+  display:none;position:absolute;right:16px;bottom:16px;
+  width:42px;height:42px;border-radius:50%;background:#fff;color:var(--blue);
+  align-items:center;justify-content:center;font-size:16px;
+}
+.dir-card.active{height:451px;background:var(--blue);border-color:#E2E0E5;color:#fff;}
+.dir-card.active p{color:#fff;}
+.dir-card.active .go{display:flex;}
+.dir-card:hover{background:var(--blue);border-color:#E2E0E5;color:#fff;}
+.dir-card:hover p{color:#fff;}
+
+/* ---------- RESEARCH & HIGHLIGHTS : 1440 x 683, #F6F6F6 ---------- */
+.research{margin-top:69px;min-height:683px;background:var(--bg);}
+.research-inner{
+  width:1267px;max-width:100%;margin:0 auto;padding-top:97px;
+  display:flex;justify-content:space-between;align-items:flex-start;
+}
+.research-left{width:595px;}
+.research-left h2{font-family:'Albert Sans',sans-serif;font-weight:500;font-size:40px;line-height:48px;color:#0F0F0F;}
+.r-lead{
+  width:464px;height:81px;margin-top:16px;
+  font-family:'Albert Sans',sans-serif;font-weight:300;font-size:20px;line-height:27px;color:var(--ink);
+}
+.r-item{display:flex;gap:53px;margin-top:29px;align-items:flex-start;min-height:127px;}
+.r-first{margin-top:35px;}
+.r-icon{
+  position:relative;flex:0 0 106px;width:106px;height:106px;border-radius:50%;background:#fff;
+  display:flex;align-items:center;justify-content:center;
+}
+.r-icon.on{background:var(--blue);color:#fff;}
+.r-icon .ic{position:absolute;max-width:none;}
+.r-icon .ic-w{display:block;}
+.r-icon img:not(.ic){width:62px;height:50px;}
+.r-text{width:436px;}
+.r-text h3{font-family:'Albert Sans',sans-serif;font-weight:600;font-size:25px;line-height:1.5;color:var(--ink);}
+.r-text h3.on{color:var(--blue);}
+.r-text p{
+  margin-top:10px;height:81px;
+  font-family:'Inter',sans-serif;font-weight:300;font-size:18px;line-height:27px;color:var(--ink);
+}
+.research-img{
+  width:584px;height:511px;margin-top:0;object-fit:cover;border-radius:24px;flex:0 0 auto;
+}
+
+/* Figma's & is the classic ampersand; Google's Albert Sans draws a stylised one, so only this glyph uses Inter */
+.amp{font-family:'Inter',sans-serif;font-weight:400;font-size:1.04em;line-height:1;}
+.tab .amp{font-weight:300;}
+
+/* ---------- INFO TILES (Our Directorates [publications] + Info Desk) ---------- */
+.tiles-section{width:100%;}
+.tiles-section.pub{margin-top:69px;}
+.tiles-section.info{margin-top:70px;padding-bottom:97px;}
+.tiles{display:flex;margin:0 auto;max-width:100%;}
+.pub .tiles{margin-top:44px;}
+.info .tiles{margin-top:37px;}
+.tiles-6{width:1350px;}
+.tiles-4{width:1023px;gap:41px;}
+
+.tile{
+  position:relative;flex:0 0 225px;width:225px;height:233px;
+  padding:21px 37px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:35px;
+  background:linear-gradient(180deg,#E9EAEB 0%,#FFFFFF 100%);
+  border-top:1px solid #DEDEDE;border-radius:12px;
+  transition:background .2s;
+}
+.tile::before{content:"";flex:0 0 67px;width:55px;}   /* icon frame 55 x 67 */
+.ic{position:absolute;max-width:none;}
+.ic-w{display:none;}
+.tile.active .ic-g,.tile:hover .ic-g{display:none;}
+.tile.active .ic-w,.tile:hover .ic-w{display:block;}
+.tile span{
+  display:flex;align-items:center;width:130px;height:39px;
+  font-family:'Albert Sans',sans-serif;font-weight:400;font-size:18px;line-height:24px;color:var(--ink);
+}
+.tile.active,.tile:hover{background:linear-gradient(180deg,var(--blue) 0%,#FFFFFF 100%);}
+
+/* ---------- MEDIA ROOM : 1440 x 778, #F6F6F6 ---------- */
+.media{
+  margin-top:92px;min-height:778px;padding-top:69px;background:var(--bg);
+}
+.media-tabs{display:flex;justify-content:center;gap:21px;margin-top:37px;padding:0 20px;flex-wrap:wrap;}
+.tab{
+  height:52px;padding:1px 38px;border-radius:10px;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:#fff;border:1px solid #1F1F1F;
+  font-family:'Albert Sans',sans-serif;font-weight:300;font-size:22px;line-height:30px;letter-spacing:-.02em;
+  color:var(--ink);white-space:nowrap;
+}
+.tab:nth-child(1){width:293px;}
+.tab:nth-child(2){width:290px;}
+.tab:nth-child(3){width:259px;}
+.tab.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+
+.news-row{display:flex;justify-content:center;gap:42px;margin-top:34px;padding:0 20px;}
+.news-card{
+  flex:0 0 377px;width:377px;height:442px;
+  padding:18px 18px 0;display:flex;flex-direction:column;gap:24px;
+  background:#fff;border-radius:24px;
+}
+.news-card .pic{width:100%;height:312px;object-fit:cover;border-radius:18px;}
+.news-card.featured{flex-basis:413px;width:413px;background:var(--soft);}
+.news-card.featured .pic{height:252px;border-radius:24px;}
+.news-card .meta{display:flex;flex-direction:column;gap:0;}
+.news-card small{font-family:'Albert Sans',sans-serif;font-size:14px;line-height:18.48px;font-weight:400;letter-spacing:0;color:#1F1F1F;text-transform:uppercase;}
+.news-card h4{font-family:'Albert Sans',sans-serif;font-size:20px;line-height:1.5;font-weight:400;letter-spacing:0;color:#333333;}
+.news-card .title-row{display:flex;align-items:center;justify-content:space-between;}
+.news-card .arrow{
+  width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:11px;
+}
+.news-card p{margin-top:4px;width:372px;max-width:100%;font-family:'Inter',sans-serif;font-size:16px;line-height:27px;font-weight:300;letter-spacing:0;color:#333333;}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--dark);color:#fff;font-family:'Inter',sans-serif;font-size:14px;line-height:26px;}
+.foot-inner{width:1267px;max-width:100%;margin:0 auto;padding:75px 0 0;}
+.foot-grid{display:grid;grid-template-columns:421px 390px 374px 1fr;padding-bottom:40px;}
+footer h6{font-size:20px;line-height:30px;font-weight:600;margin-bottom:22px;}
+footer .muted{color:#bdbdbd;}
+.foot-about p{max-width:300px;line-height:33px;}
+.foot-links a{display:block;color:#fff;line-height:26px;margin-bottom:10px;}
+.c-row{display:flex;gap:10px;margin-bottom:16px;}
+.c-row i{font-size:16px;margin-top:4px;}
+.social{display:grid;grid-template-columns:repeat(2,40px);gap:8px;align-content:start;justify-content:end;}
+.social a{
+  width:40px;height:40px;border-radius:8px;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:17px;
+}
+.copy{display:flex;justify-content:space-between;gap:8px;padding:24px 0;border-top:1px solid #4a4a4a;font-size:14px;}
+
+/* =====================================================================
+   RESPONSIVE (the Figma frame is desktop 1440; these keep it usable on
+   smaller screens without changing the desktop design)
+   ===================================================================== */
+@media (max-width:1320px){
+  .hero{padding:0 20px;}
+  .overview{left:0;padding:0 20px;}
+  .directorates,.research-inner,.foot-inner{padding-left:20px;padding-right:20px;}
+  .dir-row{flex-wrap:wrap;justify-content:center;}
+  .tiles-6{flex-wrap:wrap;justify-content:center;width:100%;}
+  .news-row{flex-wrap:wrap;}
+}
+@media (max-width:1100px){
+  .nav-toggle{display:block;}
+  .nav-menu{
+    display:none;position:absolute;top:100%;right:20px;z-index:20;
+    flex-direction:column;align-items:stretch;gap:4px;padding:12px;
+    background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.15);
+  }
+  .nav-menu.open{display:flex;}
+  .search-btn{margin:6px auto 0;}
+  .topbar{padding-right:20px;padding-left:20px;}
+
+  .overview{height:auto;flex-direction:column;align-items:center;gap:30px;}
+  .ov-text{width:100%;max-width:640px;margin-left:0;padding-top:0;}
+  .research{min-height:0;padding-bottom:60px;}
+  .research-inner{flex-direction:column;gap:40px;}
+  .research-left{width:100%;}
+  .r-lead,.r-text{width:auto;max-width:436px;}
+  .research-img{width:100%;height:auto;aspect-ratio:584/511;}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:30px;}
+  .social{justify-content:start;}
+}
+@media (max-width:640px){
+  .ov-imgs{flex:none;width:100%;gap:12px;}
+  .ov-imgs img{width:calc(50% - 6px);height:auto;aspect-ratio:261/436;}
+  .dir-card{flex:1 1 100%;width:100%;height:auto;min-height:404px;}
+  .dir-card .thumb{width:100%;height:auto;aspect-ratio:373/230;}
+  .dir-card.active{height:auto;padding-bottom:70px;}
+  .r-item{gap:20px;}
+  .r-icon{flex-basis:70px;width:70px;height:70px;}
+  .news-card,.news-card.featured{flex:1 1 100%;width:100%;height:auto;}
+  .tab{width:100% !important;font-size:18px;}
+  .tiles-4{flex-wrap:wrap;justify-content:center;width:100%;gap:16px;}
+  .copy{flex-direction:column;}
+  .sec-title{font-size:32px;}
+}
